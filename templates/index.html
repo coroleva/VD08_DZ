@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Quote App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+        .quote-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        p.quote {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        span.author {
+            display: block;
+            font-style: italic;
+            color: #888;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <h1>Random Quote</h1>
+        {% if quote %}
+            <p class="quote">{{ quote["quote"] }}</p>
+            <span class="author">— {{ quote["author"] }}</span>
+        {% else %}
+            <p>No quote available at the moment.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
